@@ -1,0 +1,9 @@
+/* Text fitting only; existing card imagery, colors and effects are retained. */
+.showcase-panel .showcase-caption:before{content:attr(data-title)!important}
+.mini-site-copy{min-width:0}.mini-site-copy h4,.mini-site-copy p,.mini-cta{overflow-wrap:anywhere}.mini-site-copy h4{padding-bottom:3px}
+.mini-site-nav{height:auto!important;min-height:48px;padding-bottom:8px}.mini-site-nav>span{line-height:1.6;white-space:normal}.mini-site-nav strong{letter-spacing:.025em}
+.mini-site-copy h4,.mini-tower .mini-site-copy h4{font-size:clamp(22px,2.2vw,28px);line-height:1.08}
+.mini-fire .mini-site-copy h4{font-size:clamp(22px,2.1vw,29px);line-height:1.2}
+.mini-site{height:auto;min-height:380px}.mini-site-content,.mini-tower .mini-site-content{height:auto;min-height:332px}.mini-site-copy small{overflow-wrap:anywhere}.mini-demo{bottom:8px}
+@media(min-width:701px) and (max-width:1000px){.mini-site-copy h4,.mini-tower .mini-site-copy h4,.mini-fire .mini-site-copy h4{font-size:20px}.mini-site-content,.mini-tower .mini-site-content{gap:6px;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.mini-site-copy h4{hyphens:auto}}
+@media(max-width:700px){.mini-site{min-height:360px}.mini-site-content,.mini-tower .mini-site-content{min-height:312px}}

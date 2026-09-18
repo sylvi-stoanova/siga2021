@@ -1,0 +1,24 @@
+/* Hero-only fluid sizing; portfolio and following sections keep their styles. */
+body.c .hero{padding-top:clamp(24px,5dvh,64px)}
+body.c .hero>.hero-copy{max-width:1040px;margin-inline:auto;padding-block:0 clamp(16px,3dvh,40px);isolation:isolate}
+body.c .hero>.hero-copy h1{font-size:clamp(30px,4.1vw,68px);line-height:1.08;letter-spacing:-.045em;margin-block:clamp(18px,2.8dvh,30px);max-width:17ch;overflow-wrap:break-word;text-wrap:balance}
+body.c .hero>.hero-copy h1 em{margin-top:clamp(10px,2dvh,20px)}
+body.c .hero>.hero-copy .intro{font-size:clamp(15px,1.15vw,18px);line-height:1.6;max-width:57ch}
+body.c .hero>.hero-copy .eyebrow{font-size:clamp(9px,.75vw,11px);line-height:1.5;letter-spacing:.09em;color:#bbb8c4}
+body.c .hero>.hero-copy .eyebrow>span{flex-shrink:0}
+body.c .hero>.hero-copy .cta{max-width:100%;min-height:52px;padding:clamp(13px,1.1vw,18px) clamp(16px,1.5vw,24px);margin-top:clamp(18px,2.5dvh,28px);font-size:clamp(13px,1vw,15px);gap:16px}
+body.c .hero>.hero-copy .cta>span{min-width:0;overflow-wrap:break-word}
+body.c .hero>.hero-copy .cta>b{flex-shrink:0}
+body.c .hero>.hero-copy .micro{font-size:clamp(11px,.85vw,13px);line-height:1.55;margin-top:clamp(10px,1.5dvh,16px);max-width:65ch;color:#aaa6b5}
+body.c .hero>.hero-copy:before{content:'';position:absolute;inset:-16px -12px;z-index:-1;pointer-events:none;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent,#0008 70%,transparent)}
+body.c .hero>.hero-copy:after{content:'';position:absolute;inset:-16px -12px;z-index:-1;pointer-events:none;opacity:0;background:radial-gradient(240px at var(--hero-x,70%) var(--hero-y,40%),#35f28b0c,transparent);transition:opacity .3s}
+@media(hover:hover) and (pointer:fine){body.c .hero>.hero-copy[data-spotlight]:after{opacity:1}body.c .hero>.hero-copy .cta:hover b{transform:translate(3px,-3px);transition:transform .2s}}
+@media(min-width:701px) and (max-width:1100px){body.c .hero>.hero-copy{max-width:850px}body.c .hero>.hero-copy h1{font-size:clamp(40px,5.3vw,56px);max-width:19ch}body.c .hero>.hero-copy .intro{max-width:54ch}body.c .hero>.hero-copy .cta{min-width:340px}}
+@media(max-width:700px){body.c .hero{padding-top:clamp(22px,4dvh,34px)}body.c .hero>.hero-copy{padding-bottom:12px}body.c .hero>.hero-copy h1{font-size:clamp(29px,8.4vw,40px);max-width:100%;line-height:1.1}body.c .hero>.hero-copy .cta{width:100%}body.c .hero>.hero-copy .intro{font-size:clamp(14px,3.8vw,16px)}body.c .hero>.hero-copy:before{background-size:88px 88px;opacity:.5}body.c .header{gap:8px;padding-inline:clamp(16px,4vw,22px)}body.c .header .languages{margin-left:auto;gap:0}body.c .header .languages a{min-width:30px;min-height:44px}body.c .header .menu-toggle{padding-left:4px;gap:4px}body.c .header .brand-lockup{font-size:16px;gap:6px}}
+@media(max-width:360px){body.c .header .menu-toggle{font-size:0}body.c .header .menu-toggle:after{content:'☰';font-size:19px}body.c .hero>.hero-copy .eyebrow{font-size:8px}}
+@media(min-width:701px) and (max-height:800px){body.c .hero{padding-top:24px}body.c .hero>.hero-copy h1{font-size:clamp(36px,3.6vw,52px);margin-block:18px}body.c .hero>.hero-copy h1 em{margin-top:10px}body.c .hero>.hero-copy .intro{font-size:16px;line-height:1.5}body.c .hero>.hero-copy .cta{margin-top:18px}body.c .hero>.hero-copy .micro{margin-top:10px}}
+@media(max-height:500px) and (orientation:landscape){body.c .hero{padding-top:18px}body.c .hero>.hero-copy h1{font-size:clamp(28px,4.5vw,38px);max-width:25ch;margin-block:14px}body.c .hero>.hero-copy .intro{font-size:14px}body.c .hero>.hero-copy .cta{min-width:0;width:auto;min-height:48px}}
+@media(hover:none),(pointer:coarse){body.c .hero>.hero-copy:after{display:none}body.c .hero>.hero-copy:before{animation:hero-grid-breathe 10s ease-in-out infinite alternate}body.c .hero>.hero-copy .cta:active{filter:brightness(.88)}body.c .hero>.hero-copy .cta:after{display:none}}
+@keyframes hero-grid-breathe{to{opacity:.25}}
+@media(min-width:701px) and (max-height:500px) and (orientation:landscape){body.c .hero>.hero-copy{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}body.c .hero>.hero-copy .eyebrow{grid-column:1/-1}body.c .hero>.hero-copy h1{grid-column:1;grid-row:2/5;font-size:clamp(26px,3.5vw,32px);margin:0}body.c .hero>.hero-copy .intro,body.c .hero>.hero-copy .cta,body.c .hero>.hero-copy .micro{grid-column:2;margin:0}body.c .hero>.hero-copy .intro{font-size:13px;line-height:1.45}body.c .hero>.hero-copy .micro{font-size:10px}body.c .hero>.hero-copy .cta{width:100%;padding:10px 12px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){body.c .hero>.hero-copy:after{display:none}body.c .hero>.hero-copy:before{animation:none}body.c .hero>.hero-copy .cta b{transform:none!important}}

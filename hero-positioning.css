@@ -1,0 +1,21 @@
+.header .brand-descriptor{display:block;font:8px/1.4 Arial,sans-serif;letter-spacing:.19em;color:#aaa8b3;margin:5px 0 0 34px;white-space:nowrap}
+body.c .hero>.hero-copy .headline-first{display:block}
+body.c .hero>.hero-copy .service-signal{font:clamp(9px,.72vw,11px)/1.8 Arial,sans-serif;letter-spacing:.095em;color:#a6a4ae;margin-top:clamp(12px,1.8dvh,20px);max-width:62ch;text-wrap:balance}
+body.c .hero>.hero-copy .hero-actions{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap;margin-top:clamp(16px,2dvh,24px)}
+body.c .hero>.hero-copy .hero-actions .cta{margin-top:0}
+.hero-secondary{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:8px 0;font-size:clamp(13px,1vw,15px);color:#d5d2db;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#64616d}
+.hero-coordinates{position:absolute;inset:0;z-index:-1;pointer-events:none;color:#ffffff09;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-around;font:11px monospace;letter-spacing:.15em}
+body.c .hero>.hero-copy:after{background-image:linear-gradient(#35f28b18 1px,transparent 1px),linear-gradient(90deg,#35f28b18 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(240px at var(--hero-x,70%) var(--hero-y,40%),black,transparent)}
+.contact-area{padding-block:clamp(44px,6vw,96px);border-top:1px solid var(--line)}
+.contact-area h2{font-size:clamp(28px,3.6vw,54px);line-height:1.12;margin-top:24px;max-width:24ch}
+.contact-actions{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px}
+.contact-email{font-size:clamp(20px,2.6vw,38px);color:var(--green);overflow-wrap:anywhere;min-height:44px;display:inline-block;padding-block:8px;max-width:100%}
+.contact-actions .cta{margin-top:0}
+@keyframes hero-enter{from{opacity:0;transform:translateY(10px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:translateY(0);clip-path:inset(0)}}
+@media(prefers-reduced-motion:no-preference){.hero-copy>.eyebrow,.hero-copy .headline-first,.hero-copy h1 em,.hero-copy>.intro,.hero-copy>.service-signal,.hero-copy>.hero-actions{animation:hero-enter .55s cubic-bezier(.2,.65,.3,1) both}.hero-copy .headline-first{animation-delay:.12s}.hero-copy h1 em{animation-delay:.24s}.hero-copy>.intro{animation-delay:.36s}.hero-copy>.service-signal{animation-delay:.48s}.hero-copy>.hero-actions{animation-delay:.6s}}
+@media(max-width:700px){.header .brand-descriptor{display:none}body.c .hero>.hero-copy .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}body.c .hero>.hero-copy .hero-actions .cta{width:100%}.hero-secondary{justify-self:start}.hero-coordinates{font-size:8px;color:#ffffff06}.contact-actions{display:block}.contact-actions .cta{display:flex;margin-top:16px;width:100%}.contact-area{padding-inline:22px}}
+@media(max-width:360px) and (max-height:650px){body.c .hero{padding-top:18px}body.c .hero>.hero-copy h1{font-size:28px;margin-block:14px}body.c .hero>.hero-copy .intro{font-size:13px;line-height:1.5}body.c .hero>.hero-copy .service-signal{margin-top:10px;font-size:8px}body.c .hero>.hero-copy .hero-actions{margin-top:12px}body.c .hero>.hero-copy .hero-actions .cta{min-height:48px;padding-block:10px}}
+@media(min-width:701px) and (max-height:500px) and (orientation:landscape){body.c .hero>.hero-copy h1{grid-row:2/6}body.c .hero>.hero-copy .service-signal,body.c .hero>.hero-copy .hero-actions{grid-column:2;margin:0}body.c .hero>.hero-copy .hero-actions{gap:0 12px}.hero-secondary{font-size:11px;min-height:36px}body.c .hero>.hero-copy .service-signal{font-size:8px}.hero-coordinates{display:none}}
+@media(hover:hover) and (pointer:fine){.hero-secondary:hover{color:var(--green)}.hero-secondary:hover span{transform:translate(2px,-2px)}}
+@media(hover:none),(pointer:coarse){.hero-secondary:active,.contact-email:active{opacity:.7}}
+@media(prefers-reduced-motion:reduce){.hero-copy *{animation:none!important;clip-path:none!important}.hero-secondary span{transform:none!important}}
