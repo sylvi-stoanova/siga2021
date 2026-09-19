@@ -7,3 +7,9 @@
 .mini-site{height:auto;min-height:380px}.mini-site-content,.mini-tower .mini-site-content{height:auto;min-height:332px}.mini-site-copy small{overflow-wrap:anywhere}.mini-demo{bottom:8px}
 @media(min-width:701px) and (max-width:1000px){.mini-site-copy h4,.mini-tower .mini-site-copy h4,.mini-fire .mini-site-copy h4{font-size:20px}.mini-site-content,.mini-tower .mini-site-content{gap:6px;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}.mini-site-copy h4{hyphens:auto}}
 @media(max-width:700px){.mini-site{min-height:360px}.mini-site-content,.mini-tower .mini-site-content{min-height:312px}}
+/* Final small-screen readability and touch-target corrections. */
+@media(max-width:360px){.showcase-panel .mini-tower .mini-site-copy h4{font-size:20px}.showcase-panel .mini-tower .mini-site-content{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)}}
+@media(max-width:700px){body.c .header .languages a{min-width:44px}body.c .header .menu-toggle{min-width:44px}body.c .header .brand{min-height:44px;display:inline-flex;align-items:center}footer a{display:inline-flex;align-items:center;min-height:44px}}
+@media(max-width:350px){body.c .header{padding-inline:16px;gap:6px}body.c .header .languages a{min-width:40px}}
+
+@media(max-width:700px){.showcase-panel .mini-fire .mini-site-copy h4{hyphens:auto}}

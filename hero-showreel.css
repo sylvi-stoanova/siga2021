@@ -28,3 +28,16 @@ body.c .hero>.hero-copy{isolation:isolate}
 
 @media(max-width:700px){.layer-0{left:20%}.layer-1{left:5%}.layer-2{left:20%}.hero-preview-layer .mini-site-content,.hero-preview-layer .mini-tower .mini-site-content{grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr)}}
 
+/* Hero-only cinematic gallery: readable left edge, clearer website surfaces on right. */
+.hero-showreel:after{background:linear-gradient(90deg,#030304fa 0%,#030304eb 27%,#030304bb 43%,#03030438 64%,#0303040d 100%)}
+.hero-preview-layer{opacity:.82;transition:opacity 1.8s ease}
+.hero-preview-layer.showreel-featured{opacity:1}
+.hero-preview-layer .showreel-gallery{position:relative;height:225px;min-width:0;overflow:hidden;background:#151311}
+.hero-preview-layer .showreel-gallery img{position:absolute;inset:0;height:100%;width:100%;opacity:0;transition:opacity 1.8s ease;object-fit:cover;animation:showreel-gallery-pan 14s ease-in-out infinite alternate!important}
+.hero-preview-layer .showreel-gallery img.shot-visible{opacity:1}
+.hero-preview-layer .showreel-fire-detail img.shot-visible{object-position:6% 45%;animation:showreel-hearth 12s ease-in-out infinite alternate!important;transform-origin:6% 45%}
+@keyframes showreel-gallery-pan{from{transform:scale(1.02) translateY(1%)}to{transform:scale(1.13) translateY(-2%)}}
+@keyframes showreel-hearth{from{transform:scale(1.04)}to{transform:scale(1.16)}}
+@media(min-width:701px) and (max-width:1100px){.hero-showreel:after{background:linear-gradient(90deg,#030304f7,#030304db 43%,#03030460 73%,#03030422)}.layer-0{left:54%}.layer-1{left:47%}.layer-2{left:54%}}
+@media(max-width:700px){.hero-showreel:after{background:linear-gradient(90deg,#030304f5,#030304d9 46%,#03030477 80%,#03030455)}.hero-preview-layer{opacity:.8}.hero-preview-layer .showreel-gallery img{animation-duration:20s!important}.hero-preview-layer .showreel-fire-detail img.shot-visible{animation-duration:20s!important}}
+@media(prefers-reduced-motion:reduce){.hero-showreel .showreel-gallery img{animation:none!important;transition:none!important}.hero-showreel .hero-preview-layer{opacity:1;transition:none!important}.hero-showreel .showreel-fire-detail img.shot-visible{transform:scale(1.04)}}
